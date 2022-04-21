@@ -1,0 +1,193 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background-color:#fdf5ff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    background-color:#fdf5ff;
+    text-align: center;
+    height: 50px;
+    border-radius: 3px;
+
+}
+
+nav{
+    text-decoration: none;
+    text-align: none;
+    background-color: white;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    list-style:none;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    width: auto;
+    margin-bottom: 50px;
+}
+
+nav ul{
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    list-style: none;
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    height: 15%;   
+}
+
+nav li a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 3rem;
+    color: white;
+    font-weight: bold;
+}
+
+nav li a:hover{
+   color: violet;
+   font-weight: bold;
+}
+
+.contenedor{
+    width: 100%;
+	margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(4, auto);
+    grid-template-areas: 
+        "logo logo logo logo"
+        "nav nav nav nav"
+        "productos productos servicios servicios"
+         "footer footer footer footer";
+    gap: 10px;
+}
+
+.nav, .footer{
+    color:white;
+    background-color: #e4bad4;
+    text-align: center;
+    height: 50px;
+    border-radius: 3px;
+}
+
+.footer{
+   padding: 3%;
+   height: fit-content;
+   margin-top: 50px;
+}
+.logo{
+    grid-area: logo;
+}
+.nav{
+    grid-area:nav;
+}
+.productos, .servicios{
+    background-color: #f8eded;
+    border-radius: 5px;
+    padding: 1rem;
+}
+.productos{
+    grid-area:productos;
+}
+.servicios{
+    grid-area:servicios;
+}
+.footer{
+    grid-area:footer;
+}
+
+
+
+h1{
+    font-size: 1.8rem;
+    color: black;
+}
+
+h2{
+    font-size: 1.2rem;
+    color: red;
+}
+
+
+
+.contenedor1{
+    width: 100%;
+	margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(5, auto);
+    grid-template-areas: 
+        "logo logo logo logo"
+        "nav nav nav nav"
+        "corte corte color color"
+        "manos manos depilacion depilacion"
+        "footer footer footer footer";
+    gap: 10px;
+}
+
+.corte{
+    grid-area:corte;
+}
+
+.color{
+    grid-area:color;
+}
+
+.manos{
+    grid-area:manos;
+}
+
+.depilacion{
+    grid-area:depilacion;
+}
+
+.corte, .color, .manos, .depilacion{
+    background-color: #f8eded;
+    border-radius: 5px;
+    padding: 1rem;
+    height: fit-content;
+    text-align: center;
+
+}
+
+.opciones{
+    list-style-type: none;
+}
+
+
+/* responsive */
+
+@media screen and (max-width: 768px){
+    .contenedor{
+        grid-template-columns: 1, fr;
+        grid-template-rows: 5, fr;
+        grid-template-areas: 
+        "logo logo logo logo" 
+        "nav nav nav nav"
+        "productos productos productos productos"
+        "servicios servicios servicios servicios"
+        "foter footer footer footer";
+        background-color: chartreuse;
+    }
+
+    .contenedor1{
+        grid-template-columns: 1, fr;
+        grid-template-rows: 7, fr;
+        grid-template-areas: 
+            "logo logo logo logo"
+            "nav nav nav nav"
+            "corte corte corte corte"
+            "color color color color"
+            "manos manos manos manos" 
+            "depilacion depilacion depilacion depilacion"
+            "footer footer footer footer";
+    }
+
+
+}
